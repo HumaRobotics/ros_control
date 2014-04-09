@@ -122,7 +122,7 @@ def main():
     try:
         # loader
         rospy.loginfo("Controller Spawner: Waiting for service "+load_controller_service)
-        rospy.wait_for_service(load_controller_service, timeout=50)
+        rospy.wait_for_service(load_controller_service, timeout=100)
         load_controller = rospy.ServiceProxy(load_controller_service, LoadController)
 
         #switcher
